@@ -1,270 +1,38 @@
---- 
-title: A Brief Intro to Token Graphs
-description: This is for the talk that I want to give this week
-date: 220204
----
-TOKEN GRAPHS
-
-Ruy Famila University of Mexico
-
-My active problem is Total Domination on Token Graphs, this is a taste
-
-There will be attention checks and a quiz
-
-There are a lot of definitions.
-
-# Introduction of the problem
-
-## Refresh of a graph
-
-Vertex (Nodes or Points), Sometimes named, sometimes numbered,
-***Draws Vertices***
-
-
-Edges:Unordered pairs connecting two vertices. (Can be directed, or weighted)
-***Draws Edges***
-
-Graph, $G= ({1,2,3,4}, {(1,2),(1,3),(3,4),(2,3)})$
-
-
-This graph is special, Call it $G^*=(V^*,E^*)$
-
-Graph Rules 
-- Finite
-- No Loops
-- No Multiple Edges
-
-Adjacency
-: $v\sim w$
-
-Order, $|V|$ 
-
-Size, $|E|$
-
-(This is all just recall)
-
----
-## New to Token Graphs
-
-Let's say we have two PHYSICAL tokens, indistinguishable.
-
-Place them around our graph
-
-Each unique collection of verteces (denoted by tokens) is a vertex in the token graph. 
-
-***Make Nodes in Token Graph***
-
-Vertices are adjacent you can slide one token in the original graph 
-
-***Make Edges in Token Graph***
-
-Rectangle + diagonal lines from bL to tR
-
-Called $F_2(G)$ (F for Fichas)
-
----
-# Into the thick of it
-
-## Johnson Graphs
-
-Named after the guy, not the body part.
-
-Over $K_5$ and $k=2$ (Complete and tokens, respectivly) 
-
-It's complicated and big, too big to draw
-
-If you'd like to see it, google "Huge Johnson"
-
-Coding Theory
-
-1977 - Steinhaus–Johnson–Trotter algorithm
-Find a Hamiltonian Cycle in permutohedron
-
-permutohedron - 
-
-
-
-(YEAR?)
-
-
-WHY?
-
-This is limit
-More than $K_n$
-More than
-
----
-## Time to Generalize, Tokens
-Given some graph $G=(V,E)$, let's talk about $F_k(G)$
-
-
-
-### Order 
-Throughout this paper, $G$ is a graph with $n$ vertices and $k$ is a positive integer. To avoid trivial cases, we assume that . The number of vertices in $F_{k}(G)$ is:
-$$
-\left|V\left(F_{k}(G)\right)\right|=\left(\begin{array}{l}
-n \\
-k
-\end{array}\right) .
-$$
-
-$|V| \geq k+1$
-
-    proof
-
-### Size 
-To calculate the number of edges in $F_{k}(G)$, charge each edge $A B$ of $F_{k}(G)$ to the unique edge $a b$ of $G$, for which $A \triangle B=\{a, b\}$. The number of edges of $F_{k}(G)$ charged to $a b$ is $\left(\begin{array}{c}n-2 \\ k-1\end{array}\right)$. Hence
-$$
-\left|E\left(F_{k}(G)\right)\right|=\left(\begin{array}{l}
-n-2 \\
-k-1
-\end{array}\right)|E(G)| .
-$$
-
-    proof    
-
-### Trivial Cases 
-$$
-F_{1}(G) \simeq G .
-$$
-
-    Proof
-
-What about the case of $k=0$
-
-Since two vertices $A$ and $B$ are adjacent in $F_{k}(G)$ if and only if $V(G) \backslash A$ and $V(G) \backslash B$ are adjacent in $F_{n-k}(G)$,
-
-$$
-F_{k}(G) \simeq F_{n-k}(G)
-$$
-
-    proof
-
-***I DON'T KNOW WHAT THIS NEXT PART MEANS YET***  
-We sometimes use (2) to assume that $k \leq \frac{n}{2}$. Also note that (1) and (2) imply two known properties of the Johnson graph: $J(n, 1) \simeq K_{n}$ and $J(n, k) \simeq J(n, n-k) .$
-At times, we study the token graph that arises when tokens are fixed at certain vertices. Given a set $X \subseteq V(G)$ with $|X|=r \leq k$, we define $F_{k}(G, X)$ to be the subgraph of $F_{k}(G)$ induced by the vertices of $F_{k}(G)$ that contain $X$ as a subset. This definition can be interpreted as having $r$ tokens fixed at $X$, and $k-r$ tokens moving on $G-X$. Hence
-$$
-F_{k}(G, X) \simeq F_{k-r}(G-X)
-$$
-
-
-
-
-
-
-
---- 
-# Advanced Topics
-
-### Connectedness
-
-Theorem 1 Let $G$ be a connected graph with diameter $\delta$. Then $F_{k}(G)$ is connected with diameter at least $k(\delta-k+1)$ and at most $k \delta$.
-
-    Proof of the thing
-
-If $G$ is $t$-connected, then $F_{k}(G)$ is $t$-connected for all $k \geq 1$.
-
-    Proof of the thing
----
-### Chromatic Number
-
-Upper Bound
-
-$\chi\left(F_{k}(G)\right) \leq \chi(G)$.
-
-    Proof of the thing
-
-Lower Bound
-
-    Proof of the thing
-
-$\chi\left(F_{k}(G)\right) \geq \frac{n-k+2}{n} \chi(G)-1$.
-
----
-### Cliques
-
-Lemma 4 Let $A, B, C$ be three pairwise adjacent vertices in $F_{k}(G)$. Then either $B \cap C \subset A$ or $A \subset B \cup C$ (but not both).
-
-    Proof of the thing
----
-### Hamiltonicity
-
-Theorem 9 If a graph $G$ contains a Hamiltonian path and $n$ is even and $k$ is odd, then $F_{k}(G)$ contains a Hamiltonian path.
-
-
-
-
-
----
----
----
----
----
-
-
----
-### Symmetry and Isomorphisms
-With only one token, the resulting token graph is isomorphic to $G$. Thus
-$$
-F_{1}(G) \simeq G .
-$$
-Since two vertices $A$ and $B$ are adjacent in $F_{k}(G)$ if and only if $V(G) \backslash A$ and $V(G) \backslash B$ are adjacent in $F_{n-k}(G)$,
-$$
-F_{k}(G) \simeq F_{n-k}(G)
-$$
-
----
-## Advanced
-
----
-
----
-### (Total) Domination
-
-## Graph Family Specifics
-
-
-### Bipartite Graphs
-
-### Stars
-
-### Path Graphs
-
-
-## Computational Complexity
-
-2^n
-
----
-# Open Problems and Quiz
-
-We now consider some open problems regarding $F_{k}(G)$ that are related to graph reconstruction. Does a given token graph uniquely determine the original graph? We conjecture that this is indeed so.
-
-Conjecture 2 Let $G$ and $H$ be two graphs, such that $F_{k}(G) \simeq F_{k}(H)$ for some $k$. Then $G \simeq H$.
-
-
-https://en.wikipedia.org/wiki/Graph_isomorphism_problem
-
-
-## Proving Total Domination
-
-## Graph Isomorphisms
-
-This is the place where I am one to type with the things and stuff
-
-
-
-
-
-http://go.fiu.edu/quiz
-
-
-Lol what is that
-
-https://www.youtube.com/watch?v=WgIvDKeyl8Y&ab_channel=WolframDemonstrationsProject
-
-
-
-# Things that are getting cut
-
-## Irregularity
+<head>
+  <title>5407 - Homework 2</title>
+</head>
+<html lang="en">
+
+1. Let $P_{2}$ be the space of polynomials of degree $\leq 2$. Let $L: P_{2} \rightarrow \mathbf{R}$, $L(f)=f(1)+f(0)+f(-1) .$
+
+    1. Show that $\mathrm{L}$ is linear and injective
+    2. Show that $\|f\|_{\infty}=\max _{x \in[0,1]}|f(x)|$ is a norm on $P_{2}$ and that $\mathrm{L}$ is bounded with this norm
+    3. Show that $\|f\|_{1}=\int_{0}^{1}|f(x)| d x$ is a norm on $P_{2}$, but that $\mathrm{L}$ is not bounded with this norm
+
+
+2. Let $(E,\|\|)$ be a normed space. A linear function $L:(E,\|\|) \rightarrow$ $(E, \mid \|)$ is called isometry if $\|L(x)\|=\|x\|$. For which values of a, b is the function $L: \mathbf{R}^{2} \rightarrow \mathbf{R}^{2}, L(x, y)=(a x+b y, c y+d x)$ an isometry? The norm in $\mathbf{R}^{2}$ is the standard norm $\|(x, y)\|_{2}^{2}=x^{2}+y^{2}$. 
+Note: this is not ${ }^{*}$ quite $^{*}$ the same as the problem in the warmup
+
+3. Let $1<p<\infty$. Show that $\ell^{2} \subset \ell^{p} \subset \ell^{\infty}$ and that the inclusions are strict. Deduce that $\ell^{p}$ can also be equipped with $\|\|_{q}$ for every $q \geq p$
+   
+4. Let $L: \ell^{1} \rightarrow \mathbf{K}, \quad L(x)=\sum_{n=1}^{\infty} \frac{x_{n}}{n^{2}}$.
+   1.  Show that $\mathrm{L}$ is well defined and bounded (the norm on $\ell^{1}$ is the standard $\|\|_{1}$ )
+   2.  Is $L$ well defined and bounded if $\ell^{1}$ is equipped with $\|\|_{\infty}$ ?
+
+5. Use Holders inequality to find a range of $p, q \geq 1$ for which the function $L: \ell^{p} \rightarrow \ell^{q}, L(x)=\left(\frac{x_{n}}{n^{2}}\right)_{n \in \mathbf{N}}$ is bounded.
+   
+6. 
+   1. Show that, for every injective function $f: \mathbf{R} \rightarrow K$ (not necessarily continuous), the function $d_{f}(x, y)=|f(x)-f(y)|$ is a metric in R.
+   2.  Show that the function $d(x, y)=\left|\frac{x}{\sqrt{x^{2}+1}}-\frac{y}{\sqrt{y^{2}+1}}\right|$ is a metric on R.
+   3. Is the function $d(x, y)=\left|\frac{x}{\sqrt{x^{2}+y^{2}}}-\frac{y}{\sqrt{y^{2}+x^{2}}}\right|$ a metric in $\mathbf{R}$ ? Prove or disprove
+
+7. Let $f_{n}(t)=\frac{1}{1+n t}$ for $t \in(0, \infty)$ and $n \in \mathbf{N}$.
+   1. What is the pointwise limit of the sequence $\left(f_{n}\right)_{n \in \mathbf{N}}$ ?
+   2. Show that for each $a>0$, the sequence $\left(f_{n}\right)_{n \in \mathbf{N}}$ converges uniformly in $C[a, \infty]$ but that it is not uniformly convergent in $C(0, \infty)$.
+
+8. (The traveling trapezoid) Let $f_{n}(t): \mathbf{R} \rightarrow \mathbf{R}, f_{n}(t)=t-n$ if $t \in$ $(n, n+1], f_{n}(t)=1$ if $t \in(n+1, n+2], f_{n}(t)=n+3-t$ if $t \in$ $(n+2, n+3]$ and $f_{n}(t)=0$ otherwise. Sketch a picture of the functions $f_{n}$. Then, show that the sequence $n \rightarrow f_{n}(t)$ converges to zero for every $t \in(-\infty, \infty)$ but it does not converge with any of the norms $\|\|_{1}, \quad\|\|_{\infty}$ and $\|\|_{2}$
+   
+9.  (The traveling triangle) Let $f_{n}(t): \mathbf{R} \rightarrow \mathbf{R}, f_{n}(t)=n(t-n)$ if $t \in$ $\left(n, n+\frac{1}{n}\right], f_{n}(t)=n\left(n+\frac{2}{n}-t\right)$ if $t \in\left(n+\frac{1}{n}, n+\frac{2}{n}\right]$ and $f_{n}(t)=0$ otherwise. Sketch a picture of the functions $f_{n}$. Then, show that the sequence $n \rightarrow f_{n}(t)$ converges to zero for every $t \in(-\infty, \infty)$. Does it converge with any of the norms $\|\|_{1}, \quad\|\|_{\infty}$ and $\|\|_{2}$ ?
+    
+10. Let $[a, b] \subset \mathbf{R}$ be a finite interval. Show that the set $H=\{f \in C[a, b]:$ $f(a)=f(b)=0\}$ is a subspace of $C[a, b]$. Then, show that every function $f \in C[a, b]$ is the pointwise limit of a sequence $\left(f_{n}\right)_{n \in \mathbf{N}} \subset H$. Is the limit also uniform (i.e, is it true that $\lim _{n \rightarrow \infty}\left\|f-f_{n}\right\|_{\infty}=0$ ?  
+A pictorial proof is more than enough
