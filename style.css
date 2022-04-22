@@ -1,1 +1,7 @@
-
+html {
+	background: linear-gradient(45deg, currentColor 25%,  transparent 25%, transparent 75%, currentColor 75%, currentColor),
+	            linear-gradient(45deg, currentColor 25%,  transparent  25%,  transparent 75%, currentColor 75%, currentColor) 10px 10px;
+	background-color: #eee;
+	background-size:20px 20px;
+	color: #bbb;
+}
