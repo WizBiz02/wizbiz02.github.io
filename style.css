@@ -141,3 +141,13 @@ color: #deba7e;
 .clock {
     float: right;
   }
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 5px solid #b00b1e;
+  border-radius: 25px;
+}
