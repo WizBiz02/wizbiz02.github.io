@@ -1,32 +1,23 @@
 * {
   box-sizing: border-box;
+  font-family: Consolas, monospace;
 }
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #111;
-  color: #fff;
-  margin: 0;
+:root{
+  --myradius: 25px;
+  color-scheme: dark;  
 }
 
-/* Header/logo Title */
+
 .header {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   background: #b00b1e;
   color: #deba7e;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
   font-size: 80px;
 }
 
 
-
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
   overflow: hidden;
   background-color: #eee;
@@ -35,83 +26,29 @@ body {
   top: 0;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
   color: #111;
   text-align: center;
-  padding: 14px 20px;
+  padding: 20px 20px;
   text-decoration: none;
 }
 
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #deba7e;
   color: black;
 }
 
-/* Active/current link */
 .navbar a.active {
   background-color: #666;
   color: white;
 }
 
-
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #111;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: #000;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #123;
-  width: 80%;
-  height: 80px;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #111;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
@@ -120,34 +57,80 @@ body {
 }
 
 
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+.side {
+  margin: 20px;
+  flex: 20%;
+  background-color: #000;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: var(--myradius);
+}
+
+.main {   
+  flex: 70%;
+  padding: 20px;
+  max-width: 2000px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
 h1 {
 color: #deba7e;
 }
 
+
+
 .project{
-    border-radius: 25px;
-    background: #deba7e;
-    color: #000;
+    border-radius: var(--myradius);
+    /* background: #deba7e; */
+    /* color: #000; */
     padding: 20px;
-    border: 10px;
+    border: 20px;
     margin: 30px;
-       
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #deba7e;
 }
 .project h2 {
-    color: #b00b1e;
+    color: #deba7e;
 }
 
-
-clock {
-    float: right;
-  }
-
+.pending{
+  border: 5px dashed #deba7e;
+}
 
 .decorated{
   display: block;
+  max-width:80%;
+  max-height:500px;
+  height: auto;
+  width:auto;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   border: 5px solid #b00b1e;
-  border-radius: 25px;
+  border-radius: var(--myradius);
 }
