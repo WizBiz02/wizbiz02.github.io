@@ -10,15 +10,15 @@ body {
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
+  padding: 40px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
+  background: #b00b1e;
+  color: #deba7e;
 }
 
 /* Increase the font size of the heading */
 .header h1 {
-  font-size: 40px;
+  font-size: 80px;
 }
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
@@ -48,7 +48,7 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #deba7e;
   color: black;
 }
 
