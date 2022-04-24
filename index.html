@@ -6,10 +6,9 @@
 <title>Justin Wisby</title>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="startTime()" >
-
-<div class="header">
-    <h1>Justin Wisby</h1>
+<body >
+<div class="header" id="rando">
+    <h1 onclick="luis_color_time()">Justin Wisby</h1>
 </div>
 
 <div class="navbar">
@@ -34,8 +33,7 @@
 
 
   <div class="main">
-    <div style="float: right" id="clock"></div>
-    <h2>What you have stumbled upon.</h2>
+    <h2 >What you have stumbled upon.</h2>
     <h5>Title description, Dec 7, 2017</h5>
     
     For academic <link href="https://www.jwisby.com/">CV</link> and <link href="https://www.jwisby.com/">Portfolio</link>.
@@ -129,20 +127,31 @@
 
 
 
+
+
+
 <script>
-  function startTime() {
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    let hp=23-h;
-    let mp=59-m;
-    if(mp<10){mp="0"+mp}
-    if(m<10){m="0"+m}
-    if(h>12){h=h-12}
-    document.getElementById('clock').innerHTML =  hp + ":" + mp;
-    setTimeout(startTime, 1000);
-    document.getElementById('clock').style.color="rgb("+ ((s/60)**.5 *255)+","+((h/24)**.5 *255) +","+((m/60)**.5 *255) +")";
-  }
+  function luis_color_time(){
+    let r=1
+    let g=1
+    let b=1
+    let rr=0
+    let gg=0
+    let bb=0
+    while( 1.05/(.2126*r+.7152*g+.0722*b)<=7){
+      r=Math.random()
+      g=Math.random()
+      b=Math.random()
+ }
+
+ while((.2126*rr+.7152*gg+.0722*bb)/.05<=7 || (.2126*rr+.7152*gg+.0722*bb)/(.2126*r+.7152*g+.0722*b)<4.5){
+      rr=Math.random()
+      gg=Math.random()
+      bb=Math.random()
+ }
+ document.querySelector(':root').style.setProperty("--darkcolor", "rgb("+ r*255+","+g*255+","+b*255+")");
+ document.querySelector(':root').style.setProperty("--lightcolor", "rgb("+ rr*255+","+gg*255+","+bb*255+")");
+  return}
 </script>
+
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
