@@ -21,26 +21,26 @@
 
 <div class="row">
   <div class="side">
-    <h2>About Me</h2>
     
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
+    <img  width =80% loading="lazy" src="assets/justin.jpg"  alt="Justin sitting in front of his TV prententing that it's outside" class="decorated">
+    <h2>About Me</h2>
+    <p>I do things that aren't mathematically awesome, instead just regularly awesome. Those things end up here. </p>
     <details>
-      <summary>Thing I can collapse</summary>
-      <p>Other things that I am able to do!</p>
+      <summary>Things I can do</summary>
+      <p>Make a collapsable element in HTML</p>
     </details>
   </div>
 
 
   <div class="main">
-    <h2 >What you have stumbled upon.</h2>
+    <h2 >Thanks for stumbling upon my projects.</h2>
     <h5>Title description, Dec 7, 2017</h5>
     
     For academic <link href="https://www.jwisby.com/">CV</link> and <link href="https://www.jwisby.com/">Portfolio</link>.
 
     This site is to be the connection to the things that I have done that do not quite make the cut to make it onto my CV. Most of the things on here are coding projects that I am really proud of, other are tangentally related projects that do require some skill that I am also proud of. Infact, this website itself is all handcoded and (hopefully) serves as one of the projects. These projects are not meant to be a complete list of all the things I have done, but rather a list of things that I have done that I think are worth mentioning. They also range from simple to techinically impressive and everything in between. 
 
-  <div class ="project">
+  <div class ="project pending">
     <h2>Markovian Music</h2>
     <h5>Florida International University, Apr 2022</h5>
     <p>More information coming soon</p>
@@ -50,10 +50,11 @@
     <h2>Bulid my own Ortholinear Keyboard with QMK and AHK</h2>
     <h5>Personal, December 2021</h5>
     <img  width =80% loading="lazy" src="assets/CustomOLK.jpg"  alt="Custom Ortho Linear Keyboard" class="decorated">
-    <p>More information coming soon</p>
+    <p>This is a </p>
+    <p>The board has since been reduced to a much smaller 4X12 arrangement, much like the planc. I find that remapping the numbers to the homerow and swapping to colemak makes the keyboard an absolute blast to use. I am occasionally working on </p>
   </div>
 
-  <div class = "project">
+  <div class = "project pending">
     <h2>Using winget to replace ninite with batch</h2>
     <h5>Personal, ????</h5>
     <p>More information coming soon</p>
@@ -62,16 +63,18 @@
   <div class = "project">
     <h2>Visual Aid Development using Tikz</h2>
     <h5>Illustrative Mathematics, Apr 2018 - Dec 2020</h5>
-    <p>More information coming soon</p>
+    <img  width =80% loading="lazy" src="assets/CountingBlocks.jpg"  alt="A sampled elementary school visual aid" class="decorated">
+    <p>The largest task that I was assigned at my time at Illustrative Mathematics (IM) was creation of visual aids for the IM curriculum. Over my two and a half years at the company, I made over 10,000 unique images to compliment the material. I ended up being image lead for the elementary expansion and used my knowledge of tikz and pgf to redesign our materials to best suit the young audience. After a lot of feedback from my peers, we were able to find designs that best complimented the growth of the students from kindergarden through fifth grade. As I was transitioning towards graduate school, I built a framework of custom classes and packages that would optimize the production of the images and wrote extensive guide books to help the company keep working on their tasks. These images that I was able to make and maintain over the two years I was there contained millions of lines of code. I value my time at IM for many reasons, one of the big ones was oppritunity to contribute so integrably to these projects. I felt that this job is what forced me to approch the areas of programming that I had been avoiding. Because of that, I know I am a much better programmer today than I was just a short while ago.</p>
+    <p>Since the material is still in active use and all images and materials are (perhaps not legally, but ethically) owned by IM. Besides, there would be a lot of graphs and it would be a very boring viewing experience. Please use the image provided to get the vibe. </p>
   </div>
   
-  <div class = "project">
+  <div class = "project pending">
     <h2>Using an Arudino to Auto Walk in Pokemon Go</h2>
     <h5>Illustrative Mathematics, Apr 2018 - Dec 2020</h5>
     <p>More information coming soon</p>
     </div>
     
-  <div class = "project">
+  <div class = "project pending">
     <h2>Homebrew solution to weekly updates</h2>
     <h5>Illustrative Mathematics, Apr 2018 - Dec 2020</h5>
     <p>More information coming soon</p>
@@ -83,32 +86,32 @@
     <p>More information coming soon</p>
   </div>
       
-  <div class = "project">
+  <div class = "project pending">
     <h2>Laser Cutting</h2>
     <h5>University of Michigan -- Flint, Feb 2018</h5>
     <img  width =80% loading="lazy" src="assets/LaserCut.jpg"  alt="Custom Ortho Linear Keyboard" class="decorated">
     <p>More information coming soon</p>
   </div>
       
-  <div class = "project">
+  <div class = "project pending">
     <h2>3D Printing and Thingiverse</h2>
     <h5>Personal, On-going</h5>
     <p>More information coming soon</p>
   </div>
 
-  <div class = "project">
+  <div class = "project pending">
     <h2>Expansion Sim</h2>
     <h5>Personal, ????</h5>
     <p>More information coming soon</p>
   </div>
 
-  <div class = "project">
+  <div class = "project pending">
     <h2>Token Graph Generation</h2>
     <h5>Florida International University, Oct 2021</h5>
     <p>More information coming soon</p>
   </div>
 
-  <div class ="project">
+  <div class ="project pending">
     <h2>Exam Generator</h2>
     <h5>Florida International University, Apr 2022</h5>
     <p>More information coming soon</p>
@@ -124,8 +127,6 @@
 
 </body>
 </html>
-
-
 
 
 
@@ -151,7 +152,9 @@
  }
  document.querySelector(':root').style.setProperty("--darkcolor", "rgb("+ r*255+","+g*255+","+b*255+")");
  document.querySelector(':root').style.setProperty("--lightcolor", "rgb("+ rr*255+","+gg*255+","+bb*255+")");
-  return}
+  return
+ 
+}
 </script>
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>

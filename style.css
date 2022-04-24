@@ -1,18 +1,20 @@
 * {
   box-sizing: border-box;
   font-family: Consolas, monospace;
+  margin: 0px;
 }
 
 :root{
   --myradius: 25px;
   --lightcolor: #deba7e;
-  --darkcolor: #123;
+  /* --darkcolor: #b00b1e; */
+  --darkcolor: #10458050;
   color-scheme: dark;  
 }
 
 
 .header {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   background: var(--darkcolor);
   color: var(--lightcolor);
@@ -25,7 +27,7 @@
   background-color: #eee;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 1;
 }
 
 .navbar a {
@@ -84,6 +86,8 @@
   padding: 20px;
   max-width: 600px;
 }
+
+
 .main {   
   flex: 70%;
   padding: 20px;
@@ -93,28 +97,15 @@
   margin-right: auto;
 }
 
-/* Footer */
+
 .footer {
   padding: 20px;
   text-align: center;
 }
 
 
-
-
-
-
-
-h1 {
-color: var(--lightcolor);
-}
-
-
-
 .project{
     border-radius: var(--myradius);
-    /* background: #var(--lightcolor); */
-    /* color: #000; */
     padding: 20px;
     border: 20px;
     margin: 30px;
@@ -122,20 +113,36 @@ color: var(--lightcolor);
     margin-left: auto;
     margin-right: auto;
     border: 5px solid var(--lightcolor);
+    animation: fadeIn ease-in-out .5s forwards;
+    opacity: 0;
+}  
+
+@keyframes fadeIn{
+  0%   {opacity:0;    transform: translateX(100%);}
+  100% {opacity:1;    transform: translateX(0px);
+  }
 }
-.project h2 {
+
+
+.main div:nth-child(2n) { animation-delay: .1s; }
+.main div:nth-child(3n) { animation-delay: .2s; }
+
+
+
+h1, h2, h3  {
     color: var(--lightcolor);
 }
 
+
 .project:hover {
   background-color: var(--darkcolor);
-  border-radius: var(--lightcolor);
 }
 
 
 .pending{
   border: 5px dashed var(--lightcolor);
 }
+
 
 .decorated{
   display: block;
@@ -145,6 +152,6 @@ color: var(--lightcolor);
   width:auto;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid var(--darkcolor);
+  border: 5px solid var(--lightcolor);
   border-radius: var(--myradius);
 }
