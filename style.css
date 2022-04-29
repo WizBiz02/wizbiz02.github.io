@@ -8,13 +8,34 @@
   --myradius: 25px;
   --lightcolor: #deba7e;
   /* --darkcolor: #b00b1e; */
-  --darkcolor: #10458050;
+  --darkcolor: hsl(212, 78%, 14%);
   color-scheme: dark;  
+}
+
+::selection {
+  background: var(--lightcolor);
+  color: #000;
 }
 
 h1, h2, h3  {
   color: var(--lightcolor);
   margin-bottom: 8px;
+}
+
+h2 a{
+  color: currentColor;
+  text-decoration: none;
+}
+
+h2 a:hover{
+  /* box-shadow: 0 0 5px 5px ; */
+  text-decoration-color: var(--lightcolor);
+  text-decoration-thickness: 2px;
+  text-decoration: underline;
+}
+
+h5 {
+    margin-bottom: 8px;
 }
 
 .header {
@@ -37,10 +58,11 @@ h1, h2, h3  {
 .navbar a {
   float: left;
   display: block;
-  color: #111;
+  color: #000;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
+  font-size: 1.5em;
 }
 
 .navbar a.right {
@@ -48,10 +70,13 @@ h1, h2, h3  {
 }
 
 .navbar a:hover {
-  background-color: var(--lightcolor);
-  color: black;
+  display: inline-block;
+  /* background-color: var(--lightcolor); */
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-decoration-color: var(--darkcolor);
+  transition: all 0s ease-out;
 }
-
 .navbar a.active {
   background-color: #666;
   color: white;
@@ -114,11 +139,10 @@ h1, h2, h3  {
 
 @keyframes fadeIn{
   0%   {opacity:0;    transform: translateX(100%);}
-  100% {opacity:1;    transform: translateX(0px);
-  }
+  100% {opacity:1;    transform: translateX(0px);}
 }
-.main div:nth-child(2n) { animation-delay: .1s; }
-.main div:nth-child(3n) { animation-delay: .2s; }
+.main div:nth-child(2n) { animation-delay: .05s; }
+.main div:nth-child(3n) { animation-delay: .1s; }
 
 .project:hover {
   background-color: var(--darkcolor);
@@ -137,13 +161,16 @@ h1, h2, h3  {
   width:auto;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
   border: 5px solid var(--lightcolor);
   border-radius: var(--myradius);
-  transition: all .5s ease-out;
-  transition-delay: .25s;
+  transition: all .25s .25s ease-out;
 }
 
-.decorated:hover{
+.decorated:active{
   max-width:100%;
   max-height:800px;
+  
 }
+/* margin-inline:auto */
