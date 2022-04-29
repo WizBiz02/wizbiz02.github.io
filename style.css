@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: Consolas, monospace;
   margin: 0px;
+  line-height: 1.7em;
 }
 
 :root{
@@ -39,11 +40,11 @@ h5 {
 }
 
 .header {
-  padding: 40px;
+  padding: 30px;
   text-align: center;
   background: var(--darkcolor);
   color: var(--lightcolor);
-  font-size: 80px;
+  font-size: 60px;
 }
 
 
@@ -94,26 +95,29 @@ h5 {
   display: flex;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
   .header {
-    font-size: 20px;
+    font-size: 30px;
+    padding: 10px;
   }
 }
 
 .side {
   flex:30%;
+  
   background-color: #000;
   padding: 20px;
-  max-width: 600px;
+  max-width: 700px;
+  min-width: 200px;
 }
 
 .main {   
   flex: 70%;
   padding: 20px;
-  max-width: 2000px;
+  max-width: 1400px;
   
   margin-left: auto;
   margin-right: auto;
@@ -129,7 +133,6 @@ h5 {
     padding: 20px;
     border: 20px;
     margin: 30px;
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     border: 5px solid var(--lightcolor);
@@ -168,9 +171,22 @@ h5 {
   transition: all .25s .25s ease-out;
 }
 
-.decorated:active{
+.decorated:hover{
   max-width:100%;
-  max-height:800px;
-  
+  max-height:800px; 
 }
-/* margin-inline:auto */
+
+#profilepic{
+  display: block;
+  max-width:80%;
+  max-height:80%;
+  height: auto;
+  width:auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 5px solid var(--lightcolor);
+  border-radius: var(--myradius);
+  transition: all .25s .25s ease-out;
+}
