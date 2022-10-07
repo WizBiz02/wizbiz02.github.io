@@ -8,6 +8,7 @@
   /* --darkcolor: #b00b1e */
   color-scheme: dark;  
   transition: .2s;
+  transition-timing-function: ease-in-out;
   /* color-scheme: light; */
 }
 
