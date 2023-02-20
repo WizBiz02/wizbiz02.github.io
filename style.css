@@ -101,23 +101,26 @@ h5 {
 }
 
 @media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
   .header {
     font-size: 30px;
     padding: 10px;
   }
 }
 
-.side {
+.bio{
   flex:30%;
-  
   background-color: #000;
   padding: 20px;
-  max-width: 700px;
-  min-width: 200px;
 }
+.bio-details{
+  max-width:100ch;
+  margin:0 auto;
+}
+#profilepic{
+  max-width:50vw;
+  border: 5px solid var(--color-primary);
+}
+
 
 .main {   
   flex: 70%;
@@ -182,7 +185,4 @@ h5 {
   transition: .25s .5s ease-out;
 }
 
-#profilepic{
-  max-height:80%;
-  border: 5px solid var(--color-primary);
-}
+
