@@ -17,6 +17,8 @@ text-decoration-line:underline;
 text-decoration-style: dashed;
 text-underline-offset: 8px;
 }
+
+
 nav div,footer div{
     font-size:xx-large;
 }
@@ -24,29 +26,20 @@ nav div,footer div{
     display: flex;
     gap:2rem;
 }
+
 .main-grid{
 display: grid;
 padding:2rem;
 gap:2rem;
 }
+
 .project{
-width:100%;
 max-width:80ch;
 height:40ch;
 overflow:hidden;
 opacity:.1;
 transition:ease-in-out .5s .25s reverse;
 }
-#secret_message{
-    width:80ch;    
-    margin:0 auto;
-}
-
-#secret_message img{
-    width:100%;
-    border-radius: 2rem;
-}
-
 .project:hover{
     overflow:visible;
     opacity:1;
@@ -57,9 +50,19 @@ transition:ease-in-out .5s .25s reverse;
     opacity:1;
     z-index: 10;
 }
-.project:hover h5{
-color:var(--color-s)
+
+#secret_message{
+    width:80ch;    
+    margin:0 auto;
 }
+
+#secret_message img{
+    width:100%;
+    border-radius: 2rem;
+}
+
+
+
 .project p,#secret_message p{
     text-align: justify;
 }
@@ -68,7 +71,7 @@ color:var(--color-s)
     border-radius: 2rem;
 }.project{
     animation-name: flash;
-    animation-delay: calc(var(--nth-child) * .15s + .5s);
+    animation-delay: calc(var(--nth-child) * .15s + .25s);
     animation-duration: 1s;
     animation-timing-function: ease-in-out;    
 }
