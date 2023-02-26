@@ -1,4 +1,4 @@
-* {
+html{
     color-scheme: dark;  
     background-color: black;
 }
@@ -20,10 +20,12 @@ nav div a,footer div a{
     padding: 0 1rem;
 }
 .main-grid{
+margin:0 auto;
+padding:0 2rem;
+max-width: 2500px;
 display: grid;
 gap:2rem;
 grid-template-columns: repeat( auto-fit, minmax(50ch, 1fr) );
-max-width: 2000px;
 }
 .project{
 max-width:80ch;
