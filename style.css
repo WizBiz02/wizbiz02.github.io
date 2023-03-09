@@ -41,7 +41,16 @@ z-index: 10;
 #secret_message{
     width:80ch;    
     margin:0 auto;
+    max-height:0px;
+    overflow:hidden;
+    transition: all 0.5s ease-in-out;
 }
+
+/* #secret_message:focus,
+#secret_message:hover{
+    max-height:100vh;
+} */
+
 .project p,#secret_message p{
     text-align: justify;
     font-size: large;
