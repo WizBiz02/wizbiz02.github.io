@@ -65,6 +65,12 @@ z-index: 10;
     animation-duration: 1s;
     animation-timing-function: ease-in-out; 
 }
+
+@media screen and (max-width: 600px) {
+.main-grid{
+    grid-template-columns: 1fr;
+    }
+}
 @keyframes flash {
     0%   {opacity: .1;}
     50% {opacity:1;}
