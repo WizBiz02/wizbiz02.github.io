@@ -37,13 +37,14 @@ opacity:.1;
 overflow:visible;
 opacity:1;
 z-index: 10;
+transition-delay: 1s;
 }
 #secret_message{
-    width:80ch;    
-    margin:0 auto;
-    max-height:0px;
-    overflow:hidden;
-    transition: all 0.5s ease-in-out;
+width:80ch;    
+margin:0 auto;
+max-height:0px;
+overflow:hidden;
+transition: all 0.5s ease-in-out;
 }
 
 /* #secret_message:focus,
