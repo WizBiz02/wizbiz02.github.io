@@ -66,10 +66,12 @@ z-index: 10;
     animation-timing-function: ease-in-out; 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 .main-grid{
+    margin:auto;
     grid-template-columns: 1fr;
     }
+    
 }
 @keyframes flash {
     0%   {opacity: .1;}
