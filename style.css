@@ -22,7 +22,7 @@ nav div a,footer div a{
 .main-grid{
 margin:0 auto;
 padding:0 2rem;
-max-width: 2500px;
+max-width: 2000px;
 display: grid;
 gap:2rem;
 grid-template-columns: repeat( auto-fit, minmax(50ch, 1fr) );
