@@ -1,0 +1,100 @@
+html{
+    color-scheme: dark;  
+    background-color: black;
+}
+nav,footer{
+    display: flex;
+    justify-content: space-between;
+    margin:2rem;
+}
+a{
+color:white;
+text-decoration-line:underline;
+text-decoration-style: dashed;
+text-underline-offset: 4px;
+}
+nav div,footer div{
+    font-size:xx-large;
+}
+nav div a,footer div a{
+    padding: 0 1rem;
+}
+.main-grid{
+margin:0 auto;
+padding:0 2rem;
+max-width: 2000px;
+display: grid;
+gap:2rem;
+grid-template-columns: repeat( auto-fit, minmax(50ch, 1fr) );
+}
+.project{
+max-width:80ch;
+height:40ch;
+overflow:hidden;
+opacity:.1;
+}
+.project:hover,.project:focus{
+overflow:visible;
+opacity:1;
+z-index: 10;
+}
+#secret_message{
+width:80ch;    
+margin:0 auto;
+max-height:0px;
+overflow:hidden;
+transition: all 0.5s ease-in-out;
+}
+
+/* #secret_message:focus,
+#secret_message:hover{
+    max-height:100vh;
+} */
+
+.project p,#secret_message p{
+    text-align: justify;
+    font-size: large;
+}
+.project img, #secret_message img{
+    width:100%;
+    border-radius: 4rem;
+}
+.project{
+    animation-name: flash;
+    animation-delay: calc(var(--nth-child) * .1s + .15s);
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; 
+}
+
+@media screen and (max-width: 500px) {
+.main-grid{
+    margin:auto;
+    grid-template-columns: 1fr;
+    }
+    
+}
+@keyframes flash {
+    0%   {opacity: .1;}
+    50% {opacity:1;}
+    100%   {opacity: .1;}
+  }
+  :nth-child(0){--nth-child:0}
+  :nth-child(1){--nth-child:1}
+  :nth-child(2){--nth-child:2}
+  :nth-child(3){--nth-child:3}
+  :nth-child(4){--nth-child:4}
+  :nth-child(5){--nth-child:5}
+  :nth-child(6){--nth-child:6}
+  :nth-child(7){--nth-child:7}
+  :nth-child(8){--nth-child:8}
+  :nth-child(9){--nth-child:9}
+  :nth-child(10){--nth-child:10}
+  :nth-child(11){--nth-child:11}
+  :nth-child(12){--nth-child:12}
+  :nth-child(13){--nth-child:13}
+  :nth-child(14){--nth-child:14}
+  :nth-child(15){--nth-child:15}
+  :nth-child(16){--nth-child:16}
+  :nth-child(17){--nth-child:17}
+  :nth-child(18){--nth-child:18}
+  :nth-child(19){--nth-child:19}
